@@ -20,10 +20,12 @@ const CreateUser = async({name,surname})=>{
 }
 
 const updateUser = async({id,name,surname})=>{
+    
     let res = await User.update(
         { name: name, surname:surname },
         { where: { id: id } })
     return res
+
 }
 
 const deleteUser = async(id)=>{
@@ -31,7 +33,7 @@ const deleteUser = async(id)=>{
     let res = await User.destroy(
         { where: { id: id } })
     return res
-    
+
 }
 
 // Export all these methods
