@@ -11,7 +11,7 @@ const GetSingleUser = async(id)=>{
 
     let user = await User.findByPk(id)
     return user
-    
+
 }
 
 const CreateUser = async({name,surname})=>{
@@ -27,9 +27,11 @@ const updateUser = async({id,name,surname})=>{
 }
 
 const deleteUser = async(id)=>{
+
     let res = await User.destroy(
         { where: { id: id } })
     return res
+    
 }
 
 // Export all these methods
