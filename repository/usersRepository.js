@@ -8,8 +8,10 @@ const GetAllUsers = async()=>{
 }
 
 const GetSingleUser = async(id)=>{
+
     let user = await User.findByPk(id)
     return user
+    
 }
 
 const CreateUser = async({name,surname})=>{
